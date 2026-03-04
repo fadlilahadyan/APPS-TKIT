@@ -1,0 +1,180 @@
+/* src/guru/keuangan.css */
+/* Tambahan kecil, ikut variable dashboard */
+
+.keu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px; /* sama feel dashboard-grid */
+}
+
+@media (max-width: 900px) {
+  .keu-grid { grid-template-columns: 1fr; }
+}
+
+/* Filter bar di header */
+.keu-filter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Input/select biar selaras */
+.keu-input,
+.keu-select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-main);
+  outline: none;
+  font-size: 14px;
+}
+
+.keu-input:focus,
+.keu-select:focus {
+  border-color: rgba(37, 99, 235, 0.55); /* --accent */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Tombol ikut gaya action-btn dashboard */
+.keu-btn {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s;
+  background: #eff6ff; /* mirip btn-blue */
+  color: #2563eb;
+}
+.keu-btn:hover { filter: brightness(0.98); }
+
+/* Item laporan */
+.keu-item {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  margin-bottom: 12px;
+}
+
+.keu-item-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.keu-item-name {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.keu-item-amount {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.keu-bar {
+  height: 8px;
+  background: rgba(15, 23, 42, 0.08); /* soft */
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.keu-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.keu-bar-fill.expense {
+  background: #ef4444;
+}
+
+.keu-meta {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.keu-total {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--main-bg);
+  font-weight: 700;
+}
+
+/* Saldo */
+.keu-saldo {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+/* Badge status SPP */
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+}
+.badge.lunas { background: #f0fdf4; color: #166534; }
+.badge.belum { background: #fff1f2; color: #991b1b; }
+
+/* Table */
+.keu-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.keu-table th,
+.keu-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  font-size: 14px;
+}
+
+.keu-table th {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+}
+
+.keu-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.keu-linkbtn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-main);
+}
+.keu-linkbtn:hover {
+  background: var(--main-bg);
+}
