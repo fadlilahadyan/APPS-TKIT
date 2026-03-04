@@ -1,0 +1,69 @@
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.section-divider {
+    margin: 20px 0;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.btn-area {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-save {
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.history-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.table-laporan {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-laporan th,
+.table-laporan td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
