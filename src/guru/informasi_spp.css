@@ -1,0 +1,172 @@
+/* src/informasi_spp/informasi_spp.css */
+
+.keu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px; 
+}
+
+@media (max-width: 900px) {
+  .keu-grid { grid-template-columns: 1fr; }
+}
+
+/* Filter bar di header */
+.keu-filter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.keu-input,
+.keu-select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-main);
+  outline: none;
+  font-size: 14px;
+  width: 100%; /* Pastikan selalu menyesuaikan kontainer */
+}
+
+.keu-input:focus,
+.keu-select:focus {
+  border-color: rgba(37, 99, 235, 0.55); 
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.keu-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s;
+  background: #eff6ff; 
+  color: #2563eb;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.keu-btn:hover { filter: brightness(0.98); background: #dbeafe; }
+
+.keu-btn-primary {
+  background: var(--primary);
+  color: white;
+}
+.keu-btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* Grid Khusus Form Input SPP agar Responsif */
+.spp-form-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr; 
+  gap: 16px;
+  align-items: end;
+}
+
+/* Table Responsive Wrapper */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.keu-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; 
+}
+
+.keu-table th,
+.keu-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  font-size: 14px;
+}
+
+.keu-table th {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+  font-weight: 600;
+  background-color: #f8fafc;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+}
+.badge.lunas { background: #f0fdf4; color: #166534; }
+.badge.belum { background: #fff1f2; color: #991b1b; }
+
+.keu-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.keu-linkbtn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #fca5a5;
+  background: #fef2f2;
+  cursor: pointer;
+  font-weight: 600;
+  color: #dc2626;
+  font-size: 13px;
+  transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.keu-linkbtn:hover {
+  background: #fee2e2;
+}
+
+/* Responsive Form & Table */
+@media screen and (max-width: 768px) {
+  .spp-form-grid {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .spp-form-grid {
+    grid-template-columns: 1fr; 
+  }
+  
+  /* FIX UNTUK HEADER DAN FILTER DI HP (Sesuai Screenshot) */
+  .keu-filter {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr; /* Bulan dan Tahun disejajarkan */
+    gap: 12px;
+  }
+  
+  .keu-filter .keu-btn {
+    grid-column: span 2; /* Tombol Terapkan ambil full width di bawahnya */
+    width: 100%;
+  }
+  
+  /* Fix text paragraf yang terpotong */
+  .header p {
+    font-size: 13px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  
+  /* Kurangi padding card agar tidak terlalu sesak di layar HP */
+  .content-card {
+    padding: 16px;
+  }
+}
